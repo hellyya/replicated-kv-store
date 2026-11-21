@@ -98,3 +98,7 @@ primary and backup never end up silently disagreeing, and returns an
 error to the client explaining that replication failed. It does not
 retry or attempt automatic recovery beyond that (out of scope per the
 assignment).
+
+## Team and my role
+
+This was a two-person project for York University's ITEC 4100 (Summer 2026). I designed and built the **backup server** (`backup_server.py`): how it handles reads and replication requests, locking around its copy of the data, and its separate logging lock, which avoids deadlock. I also wrote the backup-server and design-tradeoff sections of our report. My teammate built the primary server's replication and rollback logic.
